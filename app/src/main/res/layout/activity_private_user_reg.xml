@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PrivateUserRegActivity">
+
+    <EditText
+        android:id="@+id/editText_first_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:ems="10"
+        android:hint="First Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/private_reg_header" />
+
+    <TextView
+        android:id="@+id/private_reg_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="171dp"
+        android:layout_marginTop="57dp"
+        android:layout_marginEnd="182dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Private User Registeration"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_last_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Last Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/editText_first_name"
+        app:layout_constraintStart_toStartOf="@+id/editText_first_name"
+        app:layout_constraintTop_toBottomOf="@+id/editText_first_name" />
+
+    <EditText
+        android:id="@+id/editText_priv_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/editText_last_name"
+        app:layout_constraintStart_toStartOf="@+id/editText_last_name"
+        app:layout_constraintTop_toBottomOf="@+id/editText_last_name" />
+
+    <EditText
+        android:id="@+id/editText_priv_telephone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Telephone"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/editText_priv_email"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editText_priv_email"
+        app:layout_constraintTop_toBottomOf="@+id/editText_priv_email" />
+
+    <Spinner
+        android:id="@+id/spinner_country"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/editText_priv_telephone"
+        app:layout_constraintStart_toStartOf="@+id/editText_priv_telephone"
+        app:layout_constraintTop_toBottomOf="@+id/editText_priv_telephone" />
+
+    <Spinner
+        android:id="@+id/spinner_language"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/spinner_country"
+        app:layout_constraintStart_toStartOf="@+id/spinner_country"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_country" />
+
+    <Button
+        android:id="@+id/button_priv_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="128dp"
+        android:text="Submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_language" />
+</androidx.constraintlayout.widget.ConstraintLayout>
