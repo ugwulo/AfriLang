@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">AfriLang</string>
+<<<<<<< HEAD
+=======
     <string name="title_activity_add_student">Add a New Student</string>
     <string name="register_a_school">Register School</string>
     <!-- Strings used for fragments for navigation -->
@@ -36,6 +38,7 @@
     <string name="number_of_students_added">Number of Students Added</string>
     <string name="finish">Finish</string>
 
+>>>>>>> 0e5116699e8ece70bfefc93b7ee8875782766b34
     <string name="text_welcome">Welcome To AfriLang</string>
 
     <!--    user type selection array-->
@@ -87,5 +90,8 @@
         <item>Test</item>
         <item>Exam</item>
     </string-array>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 0e5116699e8ece70bfefc93b7ee8875782766b34
 </resources>
