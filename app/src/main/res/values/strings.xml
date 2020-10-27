@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">AfriLang</string>
     <string name="title_activity_add_student">Add a New Student</string>
+    <string name="register_a_school">Register School</string>
     <!-- Strings used for fragments for navigation -->
     <string name="add_student_fragment_label">Add Student Fragment</string>
     <string name="register_school_fragment_label">Register School Fragment</string>
@@ -34,4 +35,57 @@
     <string name="student_id_number">Student Identity Number</string>
     <string name="number_of_students_added">Number of Students Added</string>
     <string name="finish">Finish</string>
+
+    <string name="text_welcome">Welcome To AfriLang</string>
+
+    <!--    user type selection array-->
+    <string-array name="type_of_user">
+        <item>Private User</item>
+        <item>Student</item>
+        <item>School</item>
+    </string-array>
+
+    <!--    school names selection array-->
+    <string-array name="school_name">
+        <item>School A</item>
+        <item>School B</item>
+        <item>School C</item>
+        <item>School D</item>
+        <item>School E</item>
+        <item>School F</item>
+        <item>School I</item>
+        <item>School J</item>
+        <item>School K</item>
+        <item>School L</item>
+        <item>School M</item>
+    </string-array>
+
+    <!--    language selection array-->
+    <string-array name="language_name">
+        <item>Language A</item>
+        <item>Language B</item>
+        <item>Language C</item>
+        <item>Language D</item>
+        <item>Language E</item>
+        <item>Language F</item>
+        <item>Language I</item>
+    </string-array>
+
+    <!--    class selection array-->
+    <string-array name="class_name">
+        <item>Class 1</item>
+        <item>Class 2</item>
+        <item>Class 3</item>
+        <item>Class 4</item>
+        <item>Class 5</item>
+        <item>Class 6</item>
+        <item>Class 7</item>
+    </string-array>
+
+<!--    report type selection array-->
+    <string-array name="report_type">
+        <item>Test</item>
+        <item>Exam</item>
+    </string-array>
+
 </resources>
