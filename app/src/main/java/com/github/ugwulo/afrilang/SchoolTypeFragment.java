@@ -118,9 +118,4 @@ public class SchoolTypeFragment extends Fragment {
 
     }
 
-    private void sendSchoolTypeData(String typeOfSchool) {
-        FragmentDataListener listener = (FragmentDataListener) getActivity();
-        listener.schoolType(typeOfSchool);
-    }
-
 }
