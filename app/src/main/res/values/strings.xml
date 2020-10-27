@@ -1,5 +1,44 @@
 <resources>
     <string name="app_name">AfriLang</string>
+<<<<<<< HEAD
+=======
+    <string name="title_activity_add_student">Add a New Student</string>
+    <string name="register_a_school">Register School</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="add_student_fragment_label">Add Student Fragment</string>
+    <string name="register_school_fragment_label">Register School Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="add_a_student">Add a Student</string>
+    <string name="add_more_students">(click this plus sign to add more students)</string>
+    <string name="first_name">First Name</string>
+    <string name="email_address">Email Address</string>
+    <string name="last_name">Last Name</string>
+    <string name="phone_number">Telephone Number</string>
+    <string name="submit">submit</string>
+    <string name="school_registration">School Registration</string>
+    <string name="register_nursery_school">Register as Nursery School</string>
+    <string name="register_primary_school">Register as Primary School</string>
+    <string name="register_as_secondary">Register as Secondary School</string>
+    <string name="register_college">Register as College</string>
+    <string name="register_as_polytechnic">Register as Polytechnic</string>
+    <string name="register_as_university">Register as University</string>
+    <string name="register_school">Register Your School</string>
+    <string name="register_school_description">Register below as: </string>
+    <string name="school_name">School Name</string>
+    <string name="school_address">School Address</string>
+    <string name="continue_button">Continue</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="for_all_languages">Select language(s)</string>
+    <string name="student_id_number">Student Identity Number</string>
+    <string name="number_of_students_added">Number of Students Added</string>
+    <string name="finish">Finish</string>
+
+>>>>>>> 0e5116699e8ece70bfefc93b7ee8875782766b34
     <string name="text_welcome">Welcome To AfriLang</string>
 
     <!--    user type selection array-->
@@ -51,4 +90,8 @@
         <item>Test</item>
         <item>Exam</item>
     </string-array>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0e5116699e8ece70bfefc93b7ee8875782766b34
 </resources>
