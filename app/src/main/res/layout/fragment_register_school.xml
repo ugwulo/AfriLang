@@ -4,147 +4,119 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    tools:context=".RegisterSchoolFragment">
 
     <TextView
-        android:id="@+id/text_view_add_student_title"
+        android:id="@+id/text_view_register_school_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:text="@string/add_a_student"
+        android:text="@string/register_school"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="0dp"
+    <TextView
+        android:id="@+id/text_view_register_school_description"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:orientation="horizontal"
+        android:text="@string/register_school_description"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_view_add_student_title">
-
-        <TextView
-            android:id="@+id/text_view_add_student_description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/add_more_students" />
-
-        <ImageButton
-            android:id="@+id/button_plus_add_more_students"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:contentDescription="@string/add_more_students"
-            app:srcCompat="@android:drawable/ic_input_add" />
-    </LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/text_view_register_school_title" />
 
     <EditText
-        android:id="@+id/edit_text_student_first_name"
+        android:id="@+id/edit_text_school_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
-        android:hint="@string/first_name"
+        android:hint="@string/school_name"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/text_view_register_school_description" />
 
     <EditText
-        android:id="@+id/edit_text_student_last_name"
+        android:id="@+id/edit_text_school_address"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
-        android:hint="@string/last_name"
+        android:hint="@string/school_address"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_text_student_first_name" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_school_name" />
 
     <EditText
-        android:id="@+id/edit_text_student_email"
+        android:id="@+id/edit_text_school_email"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
-        android:hint="@string/student_email_address"
+        android:hint="@string/email_address"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_text_student_last_name" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_school_address" />
 
     <EditText
-        android:id="@+id/edit_text_student_phone_number"
+        android:id="@+id/edit_text_school_phone_number"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
         android:hint="@string/phone_number"
         android:inputType="phone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_text_student_email" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_school_email" />
 
     <Spinner
-        android:id="@+id/spinner_select_class"
+        android:id="@+id/spinner_select_school_country"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_text_student_phone_number" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_school_phone_number" />
 
-    <Spinner
-        android:id="@+id/spinner_select_country"
-        android:layout_width="match_parent"
+    <com.github.ugwulo.afrilang.utils.MultiSelectSpinner
+        android:id="@+id/spinner_select_language"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
+        android:spinnerMode="dropdown"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner_select_class" />
-
-    <ImageButton
-        android:id="@+id/button_navigate_back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="32dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_baseline_navigate_before_24" />
+        app:layout_constraintTop_toBottomOf="@+id/spinner_select_school_country" />
 
     <Button
-        android:id="@+id/button_add_student_submit"
+        android:id="@+id/button_register_school_submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="32dp"
         android:background="@drawable/round_corner_button"
-        android:text="@string/submit"
+        android:text="@string/continue_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

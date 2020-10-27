@@ -3,26 +3,42 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/schoolTypeFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.github.ugwulo.afrilang.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
-
+        android:id="@+id/schoolTypeFragment"
+        android:name="com.github.ugwulo.afrilang.SchoolTypeFragment"
+        android:label="fragment_school_type"
+        tools:layout="@layout/fragment_school_type" >
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_schoolTypeFragment_to_RegisterSchoolFragment"
+            app:destination="@id/RegisterSchoolFragment" />
     </fragment>
+
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.github.ugwulo.afrilang.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        android:id="@+id/RegisterSchoolFragment"
+        android:name="com.github.ugwulo.afrilang.RegisterSchoolFragment"
+        android:label="@string/register_school_fragment_label"
+        tools:layout="@layout/fragment_register_school">
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            app:destination="@id/AddStudentFragment" />
+        <action
+            android:id="@+id/action_RegisterSchoolFragment_to_schoolTypeFragment"
+            app:destination="@id/schoolTypeFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/AddStudentFragment"
+        android:name="com.github.ugwulo.afrilang.AddStudentFragment"
+        android:label="@string/add_student_fragment_label"
+        tools:layout="@layout/fragment_add_student">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/RegisterSchoolFragment"
+            app:popExitAnim="@anim/fragment_fade_exit" />
+    </fragment>
+
 </navigation>
