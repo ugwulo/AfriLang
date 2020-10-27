@@ -9,15 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AfriLang">
-<<<<<<< HEAD
-=======
+
         <activity
             android:name=".SchoolRegistrationActivity"
             android:label="@string/title_activity_add_student"
             android:theme="@style/Theme.AfriLang.NoActionBar">
         </activity>
 
->>>>>>> 0e5116699e8ece70bfefc93b7ee8875782766b34
         <activity android:name=".StudentReportActivity">
         </activity>
         <activity android:name=".StudentProfileActivity">
