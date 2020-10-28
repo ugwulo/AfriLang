@@ -9,20 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AfriLang">
-
+        <activity android:name=".StudentAssessmentActivity"></activity>
+        <activity android:name=".SchoolProfileActivity" />
         <activity
             android:name=".SchoolRegistrationActivity"
             android:label="@string/title_activity_add_student"
-            android:theme="@style/Theme.AfriLang.NoActionBar">
-        </activity>
-
-
-        <activity android:name=".StudentReportActivity">
-        </activity>
-        <activity android:name=".StudentProfileActivity">
-        </activity>
+            android:theme="@style/Theme.AfriLang.NoActionBar" />
+        <activity android:name=".StudentReportActivity" />
+        <activity android:name=".StudentProfileActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".MainActivity" >
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

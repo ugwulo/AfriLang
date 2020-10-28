@@ -39,6 +39,11 @@
 
 
     <string name="text_welcome">Welcome To AfriLang</string>
+    <string name="school_profile_title">School Profile</string>
+    <string name="school_profile_logo_description">school logo</string>
+    <string name="number_of_students">Number of Students</string>
+    <string name="print">print</string>
+    <string name="student_assessment">Student Test/Exam</string>
 
     <!--    user type selection array-->
     <string-array name="type_of_user">
@@ -84,10 +89,18 @@
         <item>Class 7</item>
     </string-array>
 
-<!--    report type selection array-->
+    <!--    report type selection array-->
     <string-array name="report_type">
         <item>Test</item>
         <item>Exam</item>
+    </string-array>
+
+    <!--    language topic array-->
+    <string-array name="language_topic">
+        <item>Topic A</item>
+        <item>Topic B</item>
+        <item>Topic C</item>
+        <item>Topic  D</item>
     </string-array>
 
 </resources>
