@@ -33,7 +33,7 @@ public class StudentAssessmentActivity extends AppCompatActivity {
 
     }
     private void populateTopicSpinner() {
-        ArrayAdapter<CharSequence> languageTopicAdapter = ArrayAdapter.createFromResource(this, R.array.language_topic, R.layout.spinner_text);
+        ArrayAdapter<CharSequence> languageTopicAdapter = ArrayAdapter.createFromResource(this, R.array.topic, R.layout.spinner_text);
         languageTopicAdapter.setDropDownViewResource(R.layout.spinner_drop_down);
         mSpinnerTopic.setAdapter(languageTopicAdapter);
     }

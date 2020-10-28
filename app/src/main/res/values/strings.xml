@@ -95,12 +95,15 @@
         <item>Exam</item>
     </string-array>
 
-    <!--    language topic array-->
-    <string-array name="language_topic">
-        <item>Topic A</item>
-        <item>Topic B</item>
-        <item>Topic C</item>
-        <item>Topic  D</item>
+    <!--    topic type selection array-->
+    <string-array name="topic">
+
+        <item>Topic 1</item>
+        <item>Topic 2</item>
+        <item>Topic 3</item>
+        <item>Topic 4</item>
+        <item>Topic 5</item>
+        <item>Topic 6</item>
     </string-array>
 
 </resources>
