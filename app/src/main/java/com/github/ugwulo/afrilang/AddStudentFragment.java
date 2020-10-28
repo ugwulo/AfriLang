@@ -80,9 +80,7 @@ public class AddStudentFragment extends Fragment implements MultiSelectSpinner.M
 
         mSpinner_Student_language.setItems(languages, getString(R.string.for_all_languages), this);
 
-        ArrayAdapter mAdapterClasses = new ArrayAdapter<>(mContext, android.R.layout.simple_list_item_1, classes);
-        mAdapterClasses.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        mSpinner_Student_class.setAdapter(mAdapterClasses);
+        populateSpinnerClasses(classes);
 
         view.findViewById(R.id.button_add_student_submit).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -99,6 +97,12 @@ public class AddStudentFragment extends Fragment implements MultiSelectSpinner.M
                 Snackbar.make(view, "SAVED. GOTO SCHOOL LANDING PAGE", Snackbar.LENGTH_LONG).show();
             }
         });
+    }
+
+    private void populateSpinnerClasses(ArrayList<String> classes) {
+        ArrayAdapter mAdapterClasses = new ArrayAdapter<>(mContext, android.R.layout.simple_list_item_1, classes);
+        mAdapterClasses.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        mSpinner_Student_class.setAdapter(mAdapterClasses);
     }
 
     private void clearInputs() {

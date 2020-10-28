@@ -72,10 +72,7 @@ public class RegisterSchoolFragment extends Fragment implements MultiSelectSpinn
         List<String> countries = DataManager.getInstance().getCountries();
         ArrayList<String> languages = DataManager.getInstance().getLanguages();
         mContext = getContext();
-        ArrayAdapter mAdapterCountries = new ArrayAdapter<>(mContext, android.R.layout.simple_list_item_1, countries);
-        mAdapterCountries.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-        mSpinnerCountry.setAdapter(mAdapterCountries);
+        populateSpinnerCountries(countries);
         mSpinnerLanguage.setItems(languages, getString(R.string.for_all_languages), this);
 
         view.findViewById(R.id.button_register_school_submit).setOnClickListener(new View.OnClickListener() {
@@ -90,6 +87,13 @@ public class RegisterSchoolFragment extends Fragment implements MultiSelectSpinn
             }
         });
 
+    }
+
+    private void populateSpinnerCountries(List<String> countries) {
+        ArrayAdapter mAdapterCountries = new ArrayAdapter<>(mContext, android.R.layout.simple_list_item_1, countries);
+        mAdapterCountries.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        mSpinnerCountry.setAdapter(mAdapterCountries);
     }
 
     private void createNewSchool(String schoolType) {
