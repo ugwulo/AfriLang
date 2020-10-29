@@ -6,13 +6,59 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/button_reg_individual"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="159dp"
+        android:text="Register as Individual"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_page_subHeader" />
+
+    <Button
+        android:id="@+id/button_reg_school"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Register as School"
+        app:layout_constraintEnd_toEndOf="@+id/button_reg_individual"
+        app:layout_constraintStart_toStartOf="@+id/button_reg_individual"
+        app:layout_constraintTop_toBottomOf="@+id/button_reg_individual" />
+
+    <Button
+        android:id="@+id/button_sign_in"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Sign In as Existing User"
+        app:layout_constraintEnd_toEndOf="@+id/button_reg_school"
+        app:layout_constraintStart_toStartOf="@+id/button_reg_school"
+        app:layout_constraintTop_toBottomOf="@+id/button_reg_school" />
+
+    <TextView
+        android:id="@+id/Welcome_page_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="166dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="187dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Welcome to AfriLang"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/welcome_page_subHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home of Learning for African Languages"
+        app:layout_constraintEnd_toEndOf="@+id/Welcome_page_header"
+        app:layout_constraintStart_toStartOf="@+id/Welcome_page_header"
+        app:layout_constraintTop_toBottomOf="@+id/Welcome_page_header" />
 </androidx.constraintlayout.widget.ConstraintLayout>
