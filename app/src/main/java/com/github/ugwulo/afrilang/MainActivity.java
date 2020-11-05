@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         Button privateUser = (Button) findViewById(R.id.button_reg_individual);
+        Button signIn = (Button) findViewById(R.id.button_sign_in);
 
 
         privateUser.setOnClickListener(new View.OnClickListener() {
@@ -24,6 +25,14 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, PrivateUserRegActivity.class);
                 startActivity(intent);
 
+            }
+        });
+
+        signIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent signInIntent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(signInIntent);
             }
         });
 

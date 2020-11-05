@@ -1,6 +1,7 @@
 package com.github.ugwulo.afrilang;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -95,6 +96,8 @@ public class AddStudentFragment extends Fragment implements MultiSelectSpinner.M
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "SAVED. GOTO SCHOOL LANDING PAGE", Snackbar.LENGTH_LONG).show();
+//                Intent intent = new Intent(this, SchoolLandingPageActivity.class);
+//                startActivity(intent);
             }
         });
     }
