@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/afrilangBgc"
     tools:context=".StudentAssessmentActivity">
 
     <TextView
@@ -36,14 +37,14 @@
         android:id="@+id/spinner_select_test_topic"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
-        android:layout_centerVertical="true"
-        android:layout_gravity="center"
+        android:background="@drawable/spinner_background"
         android:gravity="center"
         android:spinnerMode="dropdown"
-        android:background="@drawable/spinner_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"

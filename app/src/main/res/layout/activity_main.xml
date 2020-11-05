@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/afrilangBg"
     tools:context=".MainActivity">
 
     <Button
@@ -11,32 +12,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="160dp"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="104dp"
         android:layout_marginEnd="159dp"
         android:text="Register as Individual"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcome_page_subHeader" />
-
-    <Button
-        android:id="@+id/button_reg_school"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Register as School"
-        app:layout_constraintEnd_toEndOf="@+id/button_reg_individual"
-        app:layout_constraintStart_toStartOf="@+id/button_reg_individual"
-        app:layout_constraintTop_toBottomOf="@+id/button_reg_individual" />
 
     <Button
         android:id="@+id/button_sign_in"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="40dp"
         android:text="Sign In as Existing User"
         app:layout_constraintEnd_toEndOf="@+id/button_reg_school"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/button_reg_school"
         app:layout_constraintTop_toBottomOf="@+id/button_reg_school" />
+
+    <Button
+        android:id="@+id/button_reg_school"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Register as School"
+        app:layout_constraintEnd_toEndOf="@+id/button_reg_individual"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/button_reg_individual"
+        app:layout_constraintTop_toBottomOf="@+id/button_reg_individual" />
 
     <TextView
         android:id="@+id/Welcome_page_header"
