@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.android.material.snackbar.Snackbar;
+
 public class SchoolLandingPageActivity extends AppCompatActivity {
 
     @Override
@@ -27,8 +29,12 @@ public class SchoolLandingPageActivity extends AppCompatActivity {
         addStudent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent addStudentIntent = new Intent(SchoolLandingPageActivity.this, AddStudentFragment.class);
-                startActivity(addStudentIntent);
+//                Intent addStudentIntent = new Intent(SchoolLandingPageActivity.this, AddStudentActivity.class);
+//                startActivity(addStudentIntent);
+
+                Snackbar.make(v, "Navigate to Add Student Activity", Snackbar.LENGTH_LONG).show();
+
+                
             }
         });
 

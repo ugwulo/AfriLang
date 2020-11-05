@@ -26,7 +26,7 @@ public class UserWelcomePageActivity extends AppCompatActivity {
 
         Button startLearning = (Button) findViewById(R.id.button_comm_learn);
 
-        Button takeTest = (Button) findViewById(R.id.button_comm_learn);
+        Button takeTest = (Button) findViewById(R.id.button_comm_test);
 
         startLearning.setOnClickListener(new View.OnClickListener() {
             @Override

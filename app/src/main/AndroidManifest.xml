@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AfriLang">
-        <activity android:name=".MainLearningPageActivity"></activity>
-        <activity android:name=".PrivateUserRegActivity"></activity>
-        <activity android:name=".UserWelcomePageActivity"></activity>
+        <activity android:name=".AddStudentActivity"></activity>
+        <activity android:name=".MainLearningPageActivity" />
+        <activity android:name=".PrivateUserRegActivity" />
+        <activity android:name=".UserWelcomePageActivity" />
         <activity android:name=".StudentHomePageActivity" />
         <activity android:name=".SchoolLandingPageActivity" />
         <activity android:name=".StudentAssessmentActivity" />

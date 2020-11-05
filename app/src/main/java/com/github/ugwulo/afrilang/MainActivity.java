@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         schoolReg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, SchoolTypeFragment.class);
+                Intent intent = new Intent(MainActivity.this, SchoolRegistrationActivity.class);
                 startActivity(intent);
             }
         });

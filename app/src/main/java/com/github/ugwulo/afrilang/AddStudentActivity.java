@@ -1,33 +1,27 @@
 package com.github.ugwulo.afrilang;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProviders;
+
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProviders;
-import androidx.navigation.fragment.NavHostFragment;
 
 import com.github.ugwulo.afrilang.data.DataManager;
 import com.github.ugwulo.afrilang.data.SchoolInfo;
 import com.github.ugwulo.afrilang.data.StudentInfo;
 import com.github.ugwulo.afrilang.utils.MultiSelectSpinner;
 import com.github.ugwulo.afrilang.viewmodels.SchoolViewModel;
-import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class AddStudentFragment extends Fragment implements MultiSelectSpinner.MultiSpinnerListener {
+public class AddStudentActivity extends AppCompatActivity implements MultiSelectSpinner.MultiSpinnerListener {
 
     private EditText mStudent_first_name;
     private EditText mStudent_last_name;
@@ -39,41 +33,30 @@ public class AddStudentFragment extends Fragment implements MultiSelectSpinner.M
     private EditText mStudent_id_number;
     private TextView mNumber_of_students;
     private boolean mAddStudentSuccess;
-    private Context mContext;
+
     private SchoolInfo mSchool;
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this.getActivity()).get(SchoolViewModel.class);
-    }
+        setContentView(R.layout.activity_add_student);
 
-    @Override
-    public View onCreateView(
-            LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState
-    ) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_add_student, container, false);
-    }
+        mViewModel = ViewModelProviders.of(this).get(SchoolViewModel.class);
 
-    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
 
-        mContext = getContext();
-        mNumber_of_students = view.findViewById(R.id.text_view_number_of_students);
-        mViewModel.getSchool().observe(getViewLifecycleOwner(), schoolInfo -> {
+        mNumber_of_students = findViewById(R.id.text_view_number_of_students);
+        mViewModel.getSchool().observe(this, schoolInfo -> {
             int numStudents = mViewModel.getSchool().getValue().getStudents().size();
             mNumber_of_students.setText(String.valueOf(numStudents));
         });
 
-        mStudent_first_name = view.findViewById(R.id.edit_text_student_first_name);
-        mStudent_last_name = view.findViewById(R.id.edit_text_student_last_name);
-        mStudent_email = view.findViewById(R.id.edit_text_student_email);
-        mStudent_phone_number = view.findViewById(R.id.edit_text_student_phone_number);
-        mStudent_id_number = view.findViewById(R.id.edit_text_student_id_number);
-        mSpinner_Student_language = view.findViewById(R.id.spinner_select_student_language);
-        mSpinner_Student_class = view.findViewById(R.id.spinner_select_class);
+        mStudent_first_name = findViewById(R.id.edit_text_student_first_name);
+        mStudent_last_name = findViewById(R.id.edit_text_student_last_name);
+        mStudent_email = findViewById(R.id.edit_text_student_email);
+        mStudent_phone_number = findViewById(R.id.edit_text_student_phone_number);
+        mStudent_id_number = findViewById(R.id.edit_text_student_id_number);
+        mSpinner_Student_language = findViewById(R.id.spinner_select_student_language);
+        mSpinner_Student_class = findViewById(R.id.spinner_select_class);
 
         mSchool = mViewModel.getSchool().getValue();
         ArrayList<String> languages = mSchool.getLanguages();
@@ -81,29 +64,32 @@ public class AddStudentFragment extends Fragment implements MultiSelectSpinner.M
 
         mSpinner_Student_language.setItems(languages, getString(R.string.for_all_languages), this);
 
-        populateSpinnerClasses(classes);
+        Button submit = (Button) findViewById(R.id.button_add_student_submit1);
+        Button finish = (Button) findViewById(R.id.button_add_student_finish1);
 
-        view.findViewById(R.id.button_add_student_submit).setOnClickListener(new View.OnClickListener() {
+        submit.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 saveStudentInfo();
                 if(mAddStudentSuccess) {
                     clearInputs();
                 }
             }
         });
-        view.findViewById(R.id.button_add_student_finish).setOnClickListener(new View.OnClickListener() {
+
+        finish.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-//                Snackbar.make(view, "SAVED. GOTO SCHOOL LANDING PAGE", Snackbar.LENGTH_LONG).show();
-                Intent intent = new Intent(getActivity(), SchoolLandingPageActivity.class);
+            public void onClick(View v) {
+                Intent intent = new Intent(AddStudentActivity.this, SchoolLandingPageActivity.class);
                 startActivity(intent);
             }
         });
+
+        populateSpinnerClasses(classes);
     }
 
     private void populateSpinnerClasses(ArrayList<String> classes) {
-        ArrayAdapter mAdapterClasses = new ArrayAdapter<>(mContext, android.R.layout.simple_list_item_1, classes);
+        ArrayAdapter mAdapterClasses = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, classes);
         mAdapterClasses.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mSpinner_Student_class.setAdapter(mAdapterClasses);
     }
