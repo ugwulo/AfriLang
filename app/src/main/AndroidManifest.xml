@@ -10,7 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AfriLang">
         <activity android:name=".MainLearningPageActivity"></activity>
-        <activity android:name=".MainLearningActivity"></activity>
+        <activity android:name=".PrivateUserRegActivity"></activity>
+        <activity android:name=".UserWelcomePageActivity"></activity>
         <activity android:name=".StudentHomePageActivity" />
         <activity android:name=".SchoolLandingPageActivity" />
         <activity android:name=".StudentAssessmentActivity" />
