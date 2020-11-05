@@ -28,12 +28,13 @@ public class UserWelcomePageActivity extends AppCompatActivity {
 
         Button takeTest = (Button) findViewById(R.id.button_comm_learn);
 
-//        startLearning.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(UserWelcomePageActivity.this, )
-//            }
-//        });
+        startLearning.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(UserWelcomePageActivity.this, MainLearningPageActivity.class );
+                startActivity(intent);
+            }
+        });
 
         takeTest.setOnClickListener(new View.OnClickListener() {
             @Override

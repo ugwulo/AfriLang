@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         Button privateUser = (Button) findViewById(R.id.button_reg_individual);
+        Button schoolReg = (Button) findViewById(R.id.button_reg_school);
         Button signIn = (Button) findViewById(R.id.button_sign_in);
 
 
@@ -25,6 +26,14 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, PrivateUserRegActivity.class);
                 startActivity(intent);
 
+            }
+        });
+
+        schoolReg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SchoolTypeFragment.class);
+                startActivity(intent);
             }
         });
 

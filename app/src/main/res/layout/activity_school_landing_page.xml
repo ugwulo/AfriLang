@@ -21,10 +21,10 @@
 
         <Button
             android:id="@+id/button_view_student_progress"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="View Student Report"
+            android:text="View Student Progress Report"
             app:layout_constraintEnd_toEndOf="@+id/button_add_student"
             app:layout_constraintStart_toStartOf="@+id/button_add_student"
             app:layout_constraintTop_toBottomOf="@+id/button_add_student" />
@@ -34,7 +34,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="Set Student Test"
+            android:text="Set Test for Student"
             app:layout_constraintEnd_toEndOf="@+id/button_view_student_progress"
             app:layout_constraintStart_toStartOf="@+id/button_view_student_progress"
             app:layout_constraintTop_toBottomOf="@+id/button_view_student_progress" />
@@ -63,15 +63,15 @@
             app:layout_constraintStart_toStartOf="@+id/Welcome_school_page_header"
             app:layout_constraintTop_toBottomOf="@+id/Welcome_school_page_header" />
 
-    <Button
-        android:id="@+id/button_print_student_report"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Print Students Report"
-        app:layout_constraintEnd_toEndOf="@+id/button_student_test"
-        app:layout_constraintStart_toStartOf="@+id/button_student_test"
-        app:layout_constraintTop_toBottomOf="@+id/button_student_test" />
+        <Button
+            android:id="@+id/button_print_student_report"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Print Students Result"
+            app:layout_constraintEnd_toEndOf="@+id/button_student_test"
+            app:layout_constraintStart_toStartOf="@+id/button_student_test"
+            app:layout_constraintTop_toBottomOf="@+id/button_student_test" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
