@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/afrilangBgb"
     tools:context=".PrivateUserRegActivity">
 
     <LinearLayout
@@ -166,7 +167,7 @@
             android:src="@drawable/ic_baseline_arrow_drop_down_24" />
 
     </RelativeLayout>
-    
+
     <Button
         android:id="@+id/button_priv_submit"
         android:layout_width="wrap_content"
