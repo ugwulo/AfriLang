@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SchoolLandingPageActivity">
+
+
+        <Button
+            android:id="@+id/button_add_student"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="128dp"
+            android:layout_marginEnd="159dp"
+            android:text="Add Student"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/welcome_page_subHeader" />
+
+        <Button
+            android:id="@+id/button_view_student_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="View Student Progress Report"
+            app:layout_constraintEnd_toEndOf="@+id/button_add_student"
+            app:layout_constraintStart_toStartOf="@+id/button_add_student"
+            app:layout_constraintTop_toBottomOf="@+id/button_add_student" />
+
+        <Button
+            android:id="@+id/button_student_test"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Set Test for Student"
+            app:layout_constraintEnd_toEndOf="@+id/button_view_student_progress"
+            app:layout_constraintStart_toStartOf="@+id/button_view_student_progress"
+            app:layout_constraintTop_toBottomOf="@+id/button_view_student_progress" />
+
+        <TextView
+            android:id="@+id/Welcome_school_page_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="166dp"
+            android:layout_marginTop="33dp"
+            android:layout_marginEnd="187dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Welcome Name of School"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/welcome_page_subHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You have enrolled a total of 'n' students"
+            app:layout_constraintEnd_toEndOf="@+id/Welcome_school_page_header"
+            app:layout_constraintStart_toStartOf="@+id/Welcome_school_page_header"
+            app:layout_constraintTop_toBottomOf="@+id/Welcome_school_page_header" />
+
+        <Button
+            android:id="@+id/button_print_student_report"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Print Students Result"
+            app:layout_constraintEnd_toEndOf="@+id/button_student_test"
+            app:layout_constraintStart_toStartOf="@+id/button_student_test"
+            app:layout_constraintTop_toBottomOf="@+id/button_student_test" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
