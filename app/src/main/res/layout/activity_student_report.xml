@@ -4,39 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/afrilangBgc"
     android:orientation="vertical"
     tools:context=".StudentReportActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="4dp">
+        android:layout_marginTop="4dp"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/text_school_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="School Name"
             android:layout_gravity="center_horizontal"
-            android:textSize="26sp"/>
+            android:text="School Name"
+            android:textSize="26sp" />
 
         <TextView
             android:id="@+id/text_report"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="(Student Report)"
             android:layout_gravity="center_horizontal"
-            android:textSize="16sp"
-            android:textAlignment="center"/>
+            android:text="(Student Report)"
+            android:textAlignment="center"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
         android:orientation="vertical">
 
         <RelativeLayout
@@ -50,9 +51,9 @@
                 android:id="@+id/spinner_language"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
                 android:layout_centerVertical="true"
                 android:layout_gravity="center"
+                android:layout_marginStart="8dp"
                 android:background="@android:color/transparent"
                 android:gravity="center"
                 android:spinnerMode="dropdown" />
@@ -66,6 +67,7 @@
                 android:src="@drawable/ic_baseline_arrow_drop_down_24" />
 
         </RelativeLayout>
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -77,9 +79,9 @@
                 android:id="@+id/spinner_class"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
                 android:layout_centerVertical="true"
                 android:layout_gravity="center"
+                android:layout_marginStart="8dp"
                 android:background="@android:color/transparent"
                 android:gravity="center"
                 android:spinnerMode="dropdown" />
@@ -93,6 +95,7 @@
                 android:src="@drawable/ic_baseline_arrow_drop_down_24" />
 
         </RelativeLayout>
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -104,9 +107,9 @@
                 android:id="@+id/spinner_report_type"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
                 android:layout_centerVertical="true"
                 android:layout_gravity="center"
+                android:layout_marginStart="8dp"
                 android:background="@android:color/transparent"
                 android:gravity="center"
                 android:spinnerMode="dropdown" />
@@ -130,74 +133,74 @@
         android:layout_marginBottom="8dp">
 
         <TableLayout
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="#ffffff"
             android:shrinkColumns="*"
-            android:stretchColumns="*"
-            android:background="#ffffff">
+            android:stretchColumns="*">
 
             <!-- Row 1 header-->
             <TableRow android:id="@+id/tableRow1">
 
                 <TextView
                     android:id="@+id/tv_student_id"
-                    android:text="Student ID"
                     android:background="#dcdcdc"
-                    android:textColor="#000000"
-                    android:textStyle="bold"
+                    android:gravity="center"
                     android:padding="20dip"
-                    android:gravity="center"/>
+                    android:text="Student ID"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_student_name"
-                    android:text="Student Name"
                     android:background="#d3d3d3"
-                    android:textColor="#000000"
-                    android:textStyle="bold"
+                    android:gravity="center"
                     android:padding="20dip"
-                    android:gravity="center"/>
+                    android:text="Student Name"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_student_exam_score"
-                    android:text="Exam Score"
                     android:background="#cac9c9"
-                    android:textColor="#000000"
-                    android:textStyle="bold"
+                    android:gravity="center"
                     android:padding="20dip"
-                    android:gravity="center"/>
+                    android:text="Exam Score"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
 
             </TableRow>
 
             <View
-                android:layout_height="1dp"
                 android:layout_width="match_parent"
-                android:background="@color/black"/>
+                android:layout_height="1dp"
+                android:background="@color/black" />
 
             <!-- Row 2-->
             <TableRow android:id="@+id/tableRow2">
 
                 <TextView
-                    android:text="001"
                     android:background="#dcdcdc"
-                    android:textColor="#000000"
+                    android:gravity="center"
                     android:padding="20dip"
-                    android:gravity="center"/>
+                    android:text="001"
+                    android:textColor="#000000" />
 
                 <TextView
-                    android:text="Ndubuisi"
                     android:background="#d3d3d3"
-                    android:textColor="#000000"
+                    android:gravity="center"
                     android:padding="20dip"
-                    android:gravity="center"/>
+                    android:text="Ndubuisi"
+                    android:textColor="#000000" />
 
                 <TextView
-                    android:text="200"
                     android:background="#cac9c9"
-                    android:textColor="#000000"
+                    android:gravity="center"
                     android:padding="20dip"
-                    android:gravity="center"/>
+                    android:text="200"
+                    android:textColor="#000000" />
 
             </TableRow>
 
@@ -205,26 +208,26 @@
             <TableRow android:id="@+id/tableRow3">
 
                 <TextView
-                    android:text="001"
                     android:background="#dcdcdc"
-                    android:textColor="#000000"
+                    android:gravity="center"
                     android:padding="20dip"
-                    android:gravity="center"/>
+                    android:text="001"
+                    android:textColor="#000000" />
 
                 <TextView
-                    android:text="Ndubuisi"
                     android:background="#d3d3d3"
-                    android:textColor="#000000"
+                    android:gravity="center"
                     android:padding="20dip"
-                    android:gravity="center"/>
+                    android:text="Ndubuisi"
+                    android:textColor="#000000" />
 
                 <TextView
-                    android:text="200"
                     android:layout_weight="1"
                     android:background="#cac9c9"
-                    android:textColor="#000000"
+                    android:gravity="center"
                     android:padding="20dip"
-                    android:gravity="center"/>
+                    android:text="200"
+                    android:textColor="#000000" />
 
             </TableRow>
 
@@ -232,26 +235,26 @@
             <TableRow android:id="@+id/tableRow4">
 
                 <TextView
-                    android:text="001"
                     android:background="#dcdcdc"
-                    android:textColor="#000000"
+                    android:gravity="center"
                     android:padding="20dip"
-                    android:gravity="center"/>
+                    android:text="001"
+                    android:textColor="#000000" />
 
                 <TextView
-                    android:text="Ndubuisi"
                     android:background="#d3d3d3"
-                    android:textColor="#000000"
+                    android:gravity="center"
                     android:padding="20dip"
-                    android:gravity="center"/>
+                    android:text="Ndubuisi"
+                    android:textColor="#000000" />
 
                 <TextView
-                    android:text="200"
                     android:layout_weight="1"
                     android:background="#cac9c9"
-                    android:textColor="#000000"
+                    android:gravity="center"
                     android:padding="20dip"
-                    android:gravity="center"/>
+                    android:text="200"
+                    android:textColor="#000000" />
 
             </TableRow>
 
@@ -259,26 +262,26 @@
             <TableRow android:id="@+id/tableRow5">
 
                 <TextView
-                    android:text="001"
                     android:background="#dcdcdc"
-                    android:textColor="#000000"
+                    android:gravity="center"
                     android:padding="20dip"
-                    android:gravity="center"/>
+                    android:text="001"
+                    android:textColor="#000000" />
 
                 <TextView
-                    android:text="Ndubuisi"
                     android:background="#d3d3d3"
-                    android:textColor="#000000"
+                    android:gravity="center"
                     android:padding="20dip"
-                    android:gravity="center"/>
+                    android:text="Ndubuisi"
+                    android:textColor="#000000" />
 
                 <TextView
-                    android:text="200"
                     android:layout_weight="1"
                     android:background="#cac9c9"
-                    android:textColor="#000000"
+                    android:gravity="center"
                     android:padding="20dip"
-                    android:gravity="center"/>
+                    android:text="200"
+                    android:textColor="#000000" />
 
             </TableRow>
 
@@ -286,26 +289,26 @@
             <TableRow android:id="@+id/tableRow6">
 
                 <TextView
-                    android:text="001"
                     android:background="#dcdcdc"
-                    android:textColor="#000000"
+                    android:gravity="center"
                     android:padding="20dip"
-                    android:gravity="center"/>
+                    android:text="001"
+                    android:textColor="#000000" />
 
                 <TextView
-                    android:text="Ndubuisi"
                     android:background="#d3d3d3"
-                    android:textColor="#000000"
+                    android:gravity="center"
                     android:padding="20dip"
-                    android:gravity="center"/>
+                    android:text="Ndubuisi"
+                    android:textColor="#000000" />
 
                 <TextView
-                    android:text="200"
                     android:layout_weight="1"
                     android:background="#cac9c9"
-                    android:textColor="#000000"
+                    android:gravity="center"
                     android:padding="20dip"
-                    android:gravity="center"/>
+                    android:text="200"
+                    android:textColor="#000000" />
 
             </TableRow>
 
@@ -313,26 +316,26 @@
             <TableRow android:id="@+id/tableRow7">
 
                 <TextView
-                    android:text="001"
                     android:background="#dcdcdc"
-                    android:textColor="#000000"
+                    android:gravity="center"
                     android:padding="20dip"
-                    android:gravity="center"/>
+                    android:text="001"
+                    android:textColor="#000000" />
 
                 <TextView
-                    android:text="Ndubuisi"
                     android:background="#d3d3d3"
-                    android:textColor="#000000"
+                    android:gravity="center"
                     android:padding="20dip"
-                    android:gravity="center"/>
+                    android:text="Ndubuisi"
+                    android:textColor="#000000" />
 
                 <TextView
-                    android:text="200"
                     android:layout_weight="1"
                     android:background="#cac9c9"
-                    android:textColor="#000000"
+                    android:gravity="center"
                     android:padding="20dip"
-                    android:gravity="center"/>
+                    android:text="200"
+                    android:textColor="#000000" />
 
             </TableRow>
 
@@ -340,26 +343,26 @@
             <TableRow android:id="@+id/tableRow8">
 
                 <TextView
-                    android:text="001"
                     android:background="#dcdcdc"
-                    android:textColor="#000000"
+                    android:gravity="center"
                     android:padding="20dip"
-                    android:gravity="center"/>
+                    android:text="001"
+                    android:textColor="#000000" />
 
                 <TextView
-                    android:text="Ndubuisi"
                     android:background="#d3d3d3"
-                    android:textColor="#000000"
+                    android:gravity="center"
                     android:padding="20dip"
-                    android:gravity="center"/>
+                    android:text="Ndubuisi"
+                    android:textColor="#000000" />
 
                 <TextView
-                    android:text="200"
                     android:layout_weight="1"
                     android:background="#cac9c9"
-                    android:textColor="#000000"
+                    android:gravity="center"
                     android:padding="20dip"
-                    android:gravity="center"/>
+                    android:text="200"
+                    android:textColor="#000000" />
 
             </TableRow>
 
@@ -367,26 +370,26 @@
             <TableRow android:id="@+id/tableRow9">
 
                 <TextView
-                    android:text="001"
                     android:background="#dcdcdc"
-                    android:textColor="#000000"
+                    android:gravity="center"
                     android:padding="20dip"
-                    android:gravity="center"/>
+                    android:text="001"
+                    android:textColor="#000000" />
 
                 <TextView
-                    android:text="Ndubuisi"
                     android:background="#d3d3d3"
-                    android:textColor="#000000"
+                    android:gravity="center"
                     android:padding="20dip"
-                    android:gravity="center"/>
+                    android:text="Ndubuisi"
+                    android:textColor="#000000" />
 
                 <TextView
-                    android:text="200"
                     android:layout_weight="1"
                     android:background="#cac9c9"
-                    android:textColor="#000000"
+                    android:gravity="center"
                     android:padding="20dip"
-                    android:gravity="center"/>
+                    android:text="200"
+                    android:textColor="#000000" />
 
             </TableRow>
 
@@ -394,26 +397,26 @@
             <TableRow android:id="@+id/tableRow10">
 
                 <TextView
-                    android:text="001"
                     android:background="#dcdcdc"
-                    android:textColor="#000000"
+                    android:gravity="center"
                     android:padding="20dip"
-                    android:gravity="center"/>
+                    android:text="001"
+                    android:textColor="#000000" />
 
                 <TextView
-                    android:text="Ndubuisi"
                     android:background="#d3d3d3"
-                    android:textColor="#000000"
+                    android:gravity="center"
                     android:padding="20dip"
-                    android:gravity="center"/>
+                    android:text="Ndubuisi"
+                    android:textColor="#000000" />
 
                 <TextView
-                    android:text="200"
                     android:layout_weight="1"
                     android:background="#cac9c9"
-                    android:textColor="#000000"
+                    android:gravity="center"
                     android:padding="20dip"
-                    android:gravity="center"/>
+                    android:text="200"
+                    android:textColor="#000000" />
 
             </TableRow>
 
@@ -424,11 +427,11 @@
         android:id="@+id/btn_print"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/button_background"
         android:text="Print"
         android:textAllCaps="false"
-        android:layout_marginBottom="16dp"
-        android:layout_gravity="center_horizontal"
-        android:textColor="@color/black"/>
+        android:textColor="@color/black" />
 
 </LinearLayout>

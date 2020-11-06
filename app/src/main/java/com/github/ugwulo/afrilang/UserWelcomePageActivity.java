@@ -3,11 +3,14 @@ package com.github.ugwulo.afrilang;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+
 import android.content.Intent;
+
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -17,12 +20,14 @@ import com.github.ugwulo.afrilang.data.DataManager;
 
 import java.util.List;
 
+
 public class UserWelcomePageActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_welcome_page);
+
 
         Button startLearning = (Button) findViewById(R.id.button_comm_learn);
 
@@ -50,6 +55,7 @@ public class UserWelcomePageActivity extends AppCompatActivity {
 
 
         populateLanguageSpinner();
+
     }
 
     @Override
@@ -66,6 +72,7 @@ public class UserWelcomePageActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
 
         int id = item.getItemId();
 
@@ -92,4 +99,5 @@ public class UserWelcomePageActivity extends AppCompatActivity {
 
 
     }
+
 }
