@@ -4,7 +4,7 @@
     style="@style/spinnerDropDownItemStyle"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@drawable/afrilangBgc"
+    android:background="@drawable/afrilang_bgc"
     android:ellipsize="marquee"
     android:paddingLeft="10dp"
     android:paddingTop="5dp"
