@@ -1,10 +1,8 @@
 package com.github.ugwulo.afrilang;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
-
 import com.github.ugwulo.afrilang.databinding.ActivityPrivateUserAssessmentBinding;
 
 /** @author Ndubuisi Ugwulo **/

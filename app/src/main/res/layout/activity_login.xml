@@ -140,4 +140,11 @@
         android:text="Login"
         android:textColor="@color/black" />
 
+    <ProgressBar
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/progressBar"
+        android:layout_gravity="center"
+        android:visibility="invisible"/>
+
 </LinearLayout>

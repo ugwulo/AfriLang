@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1089422096391",
+    "project_id": "afrilang-7bba9",
+    "storage_bucket": "afrilang-7bba9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1089422096391:android:0ec01c5db25be83b1d12a2",
+        "android_client_info": {
+          "package_name": "com.github.ugwulo.afrilang"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1089422096391-l3d517buug3kvjsls3bdqghspor9sfef.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.github.ugwulo.afrilang",
+            "certificate_hash": "ea14ce5c901a01802844dc2ad14d20e3152669ea"
+          }
+        },
+        {
+          "client_id": "1089422096391-mkcai3ibc3v8nmoh4n4ambb5sf5de16v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDmcqsr27FBnPO4Z0taAfb77yuXLFW2Mg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1089422096391-mkcai3ibc3v8nmoh4n4ambb5sf5de16v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

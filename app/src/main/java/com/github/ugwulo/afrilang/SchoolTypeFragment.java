@@ -6,7 +6,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.fragment.NavHostFragment;
 
@@ -25,6 +24,7 @@ public class SchoolTypeFragment extends Fragment {
     private String mTypeOfSchool;
     private FragmentManager mFragmentManager;
     private SchoolViewModel mViewModel;
+    private Bundle mSchoolTypeBundle = new Bundle();
 
     public SchoolTypeFragment() {
         // Required empty public constructor
@@ -61,9 +61,10 @@ public class SchoolTypeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 mTypeOfSchool = "Nursery School";
+                mSchoolTypeBundle.putString("SCHOOL_TYPE", mTypeOfSchool);
                 mViewModel.setSchoolType(mTypeOfSchool);
                 NavHostFragment.findNavController(SchoolTypeFragment.this)
-                        .navigate(R.id.action_schoolTypeFragment_to_RegisterSchoolFragment);
+                        .navigate(R.id.action_schoolTypeFragment_to_RegisterSchoolFragment, mSchoolTypeBundle);
             }
         });
 
@@ -71,9 +72,10 @@ public class SchoolTypeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 mTypeOfSchool = "Primary School";
+                mSchoolTypeBundle.putString("SCHOOL_TYPE", mTypeOfSchool);
                 mViewModel.setSchoolType(mTypeOfSchool);
                 NavHostFragment.findNavController(SchoolTypeFragment.this)
-                        .navigate(R.id.action_schoolTypeFragment_to_RegisterSchoolFragment);
+                        .navigate(R.id.action_schoolTypeFragment_to_RegisterSchoolFragment, mSchoolTypeBundle);
             }
         });
 
@@ -81,38 +83,42 @@ public class SchoolTypeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 mTypeOfSchool = "Secondary School";
+                mSchoolTypeBundle.putString("SCHOOL_TYPE", mTypeOfSchool);
                 mViewModel.setSchoolType(mTypeOfSchool);
                 NavHostFragment.findNavController(SchoolTypeFragment.this)
-                        .navigate(R.id.action_schoolTypeFragment_to_RegisterSchoolFragment);
+                        .navigate(R.id.action_schoolTypeFragment_to_RegisterSchoolFragment, mSchoolTypeBundle);
             }
         });
 
         collegeSchool.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mTypeOfSchool = "Tertiary Institution";
+                mTypeOfSchool = "College";
+                mSchoolTypeBundle.putString("SCHOOL_TYPE", mTypeOfSchool);
                 mViewModel.setSchoolType(mTypeOfSchool);
                 NavHostFragment.findNavController(SchoolTypeFragment.this)
-                        .navigate(R.id.action_schoolTypeFragment_to_RegisterSchoolFragment);
+                        .navigate(R.id.action_schoolTypeFragment_to_RegisterSchoolFragment, mSchoolTypeBundle);
             }
         });
 
         polytechnicSchool.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mTypeOfSchool = "Tertiary Institution";
+                mTypeOfSchool = "Polytechnic";
+                mSchoolTypeBundle.putString("SCHOOL_TYPE", mTypeOfSchool);
                 mViewModel.setSchoolType(mTypeOfSchool);
                 NavHostFragment.findNavController(SchoolTypeFragment.this)
-                        .navigate(R.id.action_schoolTypeFragment_to_RegisterSchoolFragment);
+                        .navigate(R.id.action_schoolTypeFragment_to_RegisterSchoolFragment, mSchoolTypeBundle);
             }
         });
         university.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mTypeOfSchool = "Tertiary Institution";
+                mTypeOfSchool = "University";
+                mSchoolTypeBundle.putString("SCHOOL_TYPE", mTypeOfSchool);
                 mViewModel.setSchoolType(mTypeOfSchool);
                 NavHostFragment.findNavController(SchoolTypeFragment.this)
-                        .navigate(R.id.action_schoolTypeFragment_to_RegisterSchoolFragment);
+                        .navigate(R.id.action_schoolTypeFragment_to_RegisterSchoolFragment, mSchoolTypeBundle);
             }
         });
 

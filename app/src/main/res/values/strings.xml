@@ -15,6 +15,8 @@
     <string name="add_more_students">(click this plus sign to add more students)</string>
     <string name="first_name">First Name</string>
     <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
     <string name="last_name">Last Name</string>
     <string name="phone_number">Telephone Number</string>
     <string name="submit">submit</string>
@@ -44,6 +46,7 @@
     <string name="number_of_students">Number of Students</string>
     <string name="print">print</string>
     <string name="student_assessment">Student Test/Exam</string>
+    <string name="private_user">private_user</string>
 
     <!--    user type selection array-->
     <string-array name="type_of_user">
