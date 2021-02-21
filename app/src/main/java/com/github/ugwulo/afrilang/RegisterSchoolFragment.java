@@ -1,10 +1,12 @@
 package com.github.ugwulo.afrilang;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -19,10 +21,14 @@ import androidx.navigation.fragment.NavHostFragment;
 import com.github.ugwulo.afrilang.data.DataManager;
 import com.github.ugwulo.afrilang.data.SchoolInfo;
 import com.github.ugwulo.afrilang.utils.MultiSelectSpinner;
+import com.github.ugwulo.afrilang.utils.ReadCSV;
 import com.github.ugwulo.afrilang.viewmodels.SchoolViewModel;
 import com.google.android.material.snackbar.Snackbar;
 
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
 
@@ -69,11 +75,40 @@ public class RegisterSchoolFragment extends Fragment implements MultiSelectSpinn
         mSpinnerCountry = view.findViewById(R.id.spinner_select_school_country);
         mSpinnerLanguage = view.findViewById(R.id.spinner_select_language);
 
-        List<String> countries = DataManager.getInstance().getCountries();
-        ArrayList<String> languages = DataManager.getInstance().getLanguages();
+        List<String> countries = getListOfCountries();
+        ArrayList<String> languages = new ArrayList<>();
         mContext = getContext();
         populateSpinnerCountries(countries);
-        mSpinnerLanguage.setItems(languages, getString(R.string.for_all_languages), this);
+        mSpinnerCountry.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String[] selectedCountry = mSpinnerCountry.getSelectedItem().toString().split(" ");
+                String country = selectedCountry[0].toLowerCase();
+                if (country.contains("-")){
+                    country = country.replace("-", "_");
+                }
+                final int fileIdentifier = getResources().getIdentifier(country, "raw", mContext.getPackageName());
+                languages.clear();
+                try{
+                    InputStream inputStream = getResources().openRawResource(fileIdentifier);
+                    ReadCSV csvFile = new ReadCSV(inputStream);
+                    List<String[]> extracted_Languages = csvFile.read();
+                    for(int i=0; i<extracted_Languages.size(); i++){
+                        languages.add(extracted_Languages.get(i)[0]);
+                    }
+                    mSpinnerLanguage.setItems(languages, getString(R.string.for_all_languages), RegisterSchoolFragment.this);
+                }catch (Resources.NotFoundException e){
+                    mSpinnerLanguage.setItems(languages, getString(R.string.language_not_available), RegisterSchoolFragment.this);
+                    e.printStackTrace();
+                }
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
         view.findViewById(R.id.button_register_school_submit).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,6 +122,17 @@ public class RegisterSchoolFragment extends Fragment implements MultiSelectSpinn
             }
         });
 
+    }
+
+    private List<String> getListOfCountries() {
+        InputStream inputStream = getResources().openRawResource(R.raw.countries);
+        ReadCSV csvFile = new ReadCSV(inputStream);
+        List<String[]> extracted_countries = csvFile.read();
+        ArrayList<String> countries = new ArrayList<>(extracted_countries.size());
+        for(int i=0; i<extracted_countries.size(); i++){
+            countries.add(extracted_countries.get(i)[0]);
+        }
+        return countries;
     }
 
     private void populateSpinnerCountries(List<String> countries) {

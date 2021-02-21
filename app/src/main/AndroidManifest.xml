@@ -21,7 +21,7 @@
         <activity android:name=".PrivateUserProfileActivity" />
         <activity
             android:name=".SchoolRegistrationActivity"
-            android:label="@string/title_activity_add_student"
+            android:label="@string/title_activity_school_registration"
             android:theme="@style/Theme.AfriLang.NoActionBar" />
         <activity android:name=".StudentReportActivity" />
         <activity android:name=".StudentProfileActivity" />
