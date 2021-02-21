@@ -48,6 +48,10 @@
     <string name="print">print</string>
     <string name="student_assessment">Student Test/Exam</string>
     <string name="private_user">private_user</string>
+    <string name="register">Register</string>
+    <string name="confirm_registration">Confirm Registration</string>
+    <string name="languages">Languages</string>
+    <string name="school_country">school country</string>
 
     <!--    user type selection array-->
     <string-array name="type_of_user">

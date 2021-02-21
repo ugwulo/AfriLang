@@ -23,17 +23,17 @@
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/AddStudentFragment" />
+            app:destination="@id/ConfirmSchoolRegistrationFragment" />
         <action
             android:id="@+id/action_RegisterSchoolFragment_to_schoolTypeFragment"
             app:destination="@id/schoolTypeFragment" />
     </fragment>
 
     <fragment
-        android:id="@+id/AddStudentFragment"
-        android:name="com.github.ugwulo.afrilang.AddStudentFragment"
-        android:label="@string/add_student_fragment_label"
-        tools:layout="@layout/fragment_add_student">
+        android:id="@+id/ConfirmSchoolRegistrationFragment"
+        android:name="com.github.ugwulo.afrilang.ConfirmSchoolRegistrationFragment"
+        android:label="@string/confirm_registration"
+        tools:layout="@layout/fragment_confirm_school_registration">
 
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"

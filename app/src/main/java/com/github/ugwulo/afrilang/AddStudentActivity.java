@@ -64,8 +64,8 @@ public class AddStudentActivity extends AppCompatActivity implements MultiSelect
 
         mSpinner_Student_language.setItems(languages, getString(R.string.for_all_languages), this);
 
-        Button submit = (Button) findViewById(R.id.button_add_student_submit1);
-        Button finish = (Button) findViewById(R.id.button_add_student_finish1);
+        Button submit = (Button) findViewById(R.id.button_add_student_submit);
+        Button finish = (Button) findViewById(R.id.button_add_student_finish);
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override

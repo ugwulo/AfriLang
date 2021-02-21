@@ -1,6 +1,7 @@
 package com.github.ugwulo.afrilang;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -118,6 +119,8 @@ public class RegisterSchoolFragment extends Fragment implements MultiSelectSpinn
                     mViewModel.createSchool(mSchool);
                     NavHostFragment.findNavController(RegisterSchoolFragment.this)
                             .navigate(R.id.action_SecondFragment_to_FirstFragment);
+//                    Intent intent = new Intent(getActivity(), SchoolLandingPageActivity.class);
+//                    startActivity(intent);
                 }
             }
         });

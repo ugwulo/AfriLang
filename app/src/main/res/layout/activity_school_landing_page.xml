@@ -7,38 +7,6 @@
     tools:context=".SchoolLandingPageActivity">
 
 
-        <Button
-            android:id="@+id/button_add_student"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="160dp"
-            android:layout_marginTop="128dp"
-            android:layout_marginEnd="159dp"
-            android:text="Add Student"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/welcome_page_subHeader" />
-
-        <Button
-            android:id="@+id/button_view_student_progress"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:text="View Student Progress Report"
-            app:layout_constraintEnd_toEndOf="@+id/button_add_student"
-            app:layout_constraintStart_toStartOf="@+id/button_add_student"
-            app:layout_constraintTop_toBottomOf="@+id/button_add_student" />
-
-        <Button
-            android:id="@+id/button_student_test"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:text="Set Test for Student"
-            app:layout_constraintEnd_toEndOf="@+id/button_view_student_progress"
-            app:layout_constraintStart_toStartOf="@+id/button_view_student_progress"
-            app:layout_constraintTop_toBottomOf="@+id/button_view_student_progress" />
-
         <TextView
             android:id="@+id/Welcome_school_page_header"
             android:layout_width="wrap_content"
@@ -63,15 +31,62 @@
             app:layout_constraintStart_toStartOf="@+id/Welcome_school_page_header"
             app:layout_constraintTop_toBottomOf="@+id/Welcome_school_page_header" />
 
-        <Button
-            android:id="@+id/button_print_student_report"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_marginTop="32dp"
-            android:text="Print Students Result"
-            app:layout_constraintEnd_toEndOf="@+id/button_student_test"
-            app:layout_constraintStart_toStartOf="@+id/button_student_test"
-            app:layout_constraintTop_toBottomOf="@+id/button_student_test" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/welcome_page_subHeader">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/button_add_student"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="64dp"
+                            android:layout_marginTop="32dp"
+                            android:layout_marginEnd="64dp"
+                            android:text="Add Student"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <Button
+                            android:id="@+id/button_view_student_progress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="32dp"
+                            android:text="View Student Progress Report"
+                            app:layout_constraintEnd_toEndOf="@+id/button_add_student"
+                            app:layout_constraintStart_toStartOf="@+id/button_add_student"
+                            app:layout_constraintTop_toBottomOf="@+id/button_add_student" />
+
+                        <Button
+                            android:id="@+id/button_student_test"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="32dp"
+                            android:text="Set Test for Student"
+                            app:layout_constraintEnd_toEndOf="@+id/button_view_student_progress"
+                            app:layout_constraintStart_toStartOf="@+id/button_view_student_progress"
+                            app:layout_constraintTop_toBottomOf="@+id/button_view_student_progress" />
+
+                        <Button
+                            android:id="@+id/button_print_student_report"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="32dp"
+                            android:text="Print Students Result"
+                            app:layout_constraintEnd_toEndOf="@+id/button_student_test"
+                            app:layout_constraintStart_toStartOf="@+id/button_student_test"
+                            app:layout_constraintTop_toBottomOf="@+id/button_student_test" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

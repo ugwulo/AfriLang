@@ -29,12 +29,9 @@ public class SchoolLandingPageActivity extends AppCompatActivity {
         addStudent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent addStudentIntent = new Intent(SchoolLandingPageActivity.this, AddStudentActivity.class);
-//                startActivity(addStudentIntent);
+                Intent addStudentIntent = new Intent(SchoolLandingPageActivity.this, AddStudentActivity.class);
+                startActivity(addStudentIntent);
 
-                Snackbar.make(v, "Navigate to Add Student Activity", Snackbar.LENGTH_LONG).show();
-
-                
             }
         });
 
