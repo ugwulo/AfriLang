@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -18,6 +21,7 @@ import com.github.ugwulo.afrilang.data.StudentInfo;
 import com.github.ugwulo.afrilang.viewmodels.SchoolViewModel;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ConfirmSchoolRegistrationFragment extends Fragment {
 
@@ -32,6 +36,7 @@ public class ConfirmSchoolRegistrationFragment extends Fragment {
     private Context mContext;
     private SchoolInfo mSchool;
     private TextView mSchool_country;
+    private List<String> mLanguages;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -81,13 +86,21 @@ public class ConfirmSchoolRegistrationFragment extends Fragment {
     }
 
     private void populateSubmissionTextViews() {
-        ArrayList<String> languages = mSchool.getLanguages();
+        List<String> mLanguages = mSchool.getLanguages();
         mSchool_name.setText(mSchool.getSchoolName());
         mSchool_address.setText(mSchool.getSchoolAddress());
         mSchool_email.setText(mSchool.getSchoolEmail());
         mSchool_phone_number.setText(mSchool.getSchoolPhone());
         mSchool_country.setText(mSchool.getCountry());
-        mSchool_languages.setText(languages.toString());
+        displayLanguageList();
+        mSchool_languages.setText(mLanguages.toString());
+    }
+
+    private void displayLanguageList() {
+        ListView languageList = getView().findViewById(R.id.listview_selected_languages);
+        ListAdapter langAdapter = new ArrayAdapter<>(
+                getContext(), android.R.layout.simple_list_item_1, mSchool.getLanguages());
+        languageList.setAdapter(langAdapter);
     }
 
 }
